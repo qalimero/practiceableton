@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: futura-pt, sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  background-color: #fff;
+}
+body .container {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3333333333);
+  grid-template-rows: auto;
+  grid-template-areas: "navigation navigation navigation navigation navigation navigation navigation navigation navigation navigation navigation navigation";
+  max-width: 1600px;
+  background-color: #f3f3f3;
+}
+body .container .nav-item {
+  grid-area: navigation;
+  max-height: 120px;
+  padding-top: 20px;
+  border-bottom: 1px solid #eee;
+}
+body .container .nav-item nav {
+  list-style-type: none;
+}
+body .container .nav-item nav .menu {
+  grid-column: 2/5;
+}
+
+ul {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
