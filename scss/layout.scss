@@ -7,48 +7,14 @@ body {
   .wrapper {
     max-width: 1600px;
     background-color: #fff;
-  
-    .nav-item {
-      max-height: 120px;
-      padding-top: 20px;
-      .logo{
-        align-items: center;
-      }
-      nav {
-        .menu {
-          display: flex;
-          align-items: center;
-          border-bottom: 2px solid #eee;
-          li {
-            margin: 0 10px;
-            padding: 0 10px;
-            list-style: none;
-            &:nth-child(-n +8){
-            max-width: 80px;
-            }
-            &:nth-child(8){
-              color: $orange;
-              
-            }
-            &:nth-child(9){
-              margin-left: auto;
-              color: $blue-dark;
-            }
-          }
-        }
-        .subnav{
-          display: flex;
-          align-items: center;
-          list-style: none;
-          li{
-            margin: 0 10px;
-            padding: 0 10px;
-          }
-
-        }
-      }
-    }
-    .hero-item {    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 8.3%);
+      grid-template-rows: minmax(100px, 100vh) 100%;
+      row-gap: 8.3vw;
+      grid-template-areas: ". header header header header header header header header header header .";
+                           
+      
     }
   }
 }

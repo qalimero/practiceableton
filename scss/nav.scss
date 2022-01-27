@@ -1,0 +1,42 @@
+
+nav {
+  padding-top: 20px;
+  .logo {
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    li {
+      margin: 0 10px;
+      padding: 0 10px;
+      list-style: none;
+      &:nth-child(-n + 8) {
+        max-width: 80px;
+      }
+      &:nth-child(8) {
+        color: $orange;
+      }
+      &:nth-child(9) {
+        margin-left: auto;
+        color: $blue-dark;
+      }
+      &:nth-child(10){
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .subnav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 1rem 0;
+    font-size: 0.88rem;
+    li {
+      margin: 0 10px;
+      padding: 0 10px;
+    }
+  }
+}

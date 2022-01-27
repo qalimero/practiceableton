@@ -1,0 +1,17 @@
+  .hero-item1 {
+    grid-area: header;
+    background-image: url(../img/header-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 100vh;
+  }
+  .hero-item2 {
+    grid-area: header;
+    align-self: center;
+    justify-self: center;
+  }
+  .hero-item3{
+      grid-row-start: 3;
+  }
+

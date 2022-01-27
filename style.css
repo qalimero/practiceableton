@@ -19,46 +19,89 @@ body .wrapper {
   max-width: 1600px;
   background-color: #fff;
 }
-body .wrapper .nav-item {
-  max-height: 120px;
+body .wrapper .hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  grid-template-rows: minmax(100px, 100vh) 100%;
+  row-gap: 8.3vw;
+  grid-template-areas: ". header header header header header header header header header header .";
+}
+
+nav {
+  font-family: futura-pt, sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 9rem;
+  font-weight: 500;
+  font-family: futura-pt, sans-serif;
+  color: #fd5948;
+}
+
+nav {
   padding-top: 20px;
 }
-body .wrapper .nav-item .logo {
+nav .logo {
   align-items: center;
 }
-body .wrapper .nav-item nav .menu {
+nav .menu {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #eee;
 }
-body .wrapper .nav-item nav .menu li {
+nav .menu li {
   margin: 0 10px;
   padding: 0 10px;
   list-style: none;
 }
-body .wrapper .nav-item nav .menu li:nth-child(-n+8) {
+nav .menu li:nth-child(-n+8) {
   max-width: 80px;
 }
-body .wrapper .nav-item nav .menu li:nth-child(8) {
+nav .menu li:nth-child(8) {
   color: #ff764d;
 }
-body .wrapper .nav-item nav .menu li:nth-child(9) {
+nav .menu li:nth-child(9) {
   margin-left: auto;
   color: #0000ff;
 }
-body .wrapper .nav-item nav .subnav {
+nav .menu li:nth-child(10) {
+  font-size: 0.75rem;
+}
+nav .subnav {
   display: flex;
   align-items: center;
   list-style: none;
+  padding: 1rem 0;
+  font-size: 0.88rem;
 }
-body .wrapper .nav-item nav .subnav li {
+nav .subnav li {
   margin: 0 10px;
   padding: 0 10px;
 }
-header {
-  font-family: futura-pt, sans-serif;
-  text-transform: capitalize;
-  font-weight: 500;
+
+.hero-item1 {
+  grid-area: header;
+  background-image: url(../img/header-img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 100vh;
+}
+
+.hero-item2 {
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+}
+
+.hero-item3 {
+  grid-row-start: 3;
 }
 
 /*# sourceMappingURL=style.css.map */
