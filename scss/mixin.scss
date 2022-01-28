@@ -1,0 +1,12 @@
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(12, 8.3%);
+    @include gap
+}
+@mixin gap {
+    padding-bottom: calc(100vw/12);
+}
+@mixin center-body{
+    justify-self: center;
+    max-width: 680px;
+}

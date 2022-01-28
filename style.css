@@ -22,19 +22,41 @@ body .wrapper {
 body .wrapper .hero-grid {
   display: grid;
   grid-template-columns: repeat(12, 8.3%);
-  grid-template-rows: minmax(100px, 100vh) 100%;
-  row-gap: 8.3vw;
+  padding-bottom: 8.3333333333vw;
+  grid-template-rows: minmax(100px, 100vh);
   grid-template-areas: ". header header header header header header header header header header .";
+}
+body .wrapper .body-container {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  padding-bottom: 8.3333333333vw;
+  row-gap: 0;
+  grid-template-rows: auto;
+  grid-template-areas: ". . . title title title title title title . . ." ". . . text text text text text text . . .";
+}
+body .wrapper .body-container .body-title {
+  grid-area: title;
+  justify-self: center;
+  max-width: 680px;
+}
+body .wrapper .body-container .body-text {
+  grid-area: text;
+  justify-self: center;
+  max-width: 680px;
+}
+
+* {
+  font-family: futura-pt, sans-serif;
 }
 
 nav {
-  font-family: futura-pt, sans-serif;
   text-transform: capitalize;
   font-weight: 500;
 }
 
 a {
   text-decoration: none;
+  color: #0000ff;
 }
 
 h1 {
@@ -85,23 +107,25 @@ nav .subnav li {
   padding: 0 10px;
 }
 
-.hero-item1 {
+.hero-background {
   grid-area: header;
   background-image: url(../img/header-img.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   min-height: 100vh;
+  margin-bottom: 8.3333333333vw;
 }
 
-.hero-item2 {
+.hero-title {
   grid-area: header;
   align-self: center;
   justify-self: center;
 }
 
-.hero-item3 {
-  grid-row-start: 3;
+.body-container .body-title {
+  font-weight: 500;
+  margin-bottom: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

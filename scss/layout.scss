@@ -1,3 +1,4 @@
+@import "mixin.scss";
 body {
   margin-left: auto;
   margin-right: auto;
@@ -8,13 +9,27 @@ body {
     max-width: 1600px;
     background-color: #fff;
     .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 8.3%);
-      grid-template-rows: minmax(100px, 100vh) 100%;
-      row-gap: 8.3vw;
+      @include grid;
+      grid-template-rows: minmax(100px, 100vh);
       grid-template-areas: ". header header header header header header header header header header .";
-                           
-      
+    }
+    .body-container {
+      @include grid;
+      row-gap: 0;
+      grid-template-rows: auto;
+      grid-template-areas:
+        ". . . title title title title title title . . ."
+        ". . . text text text text text text . . .";
+   
+      .body-title {
+        grid-area: title;
+        @include center-body;
+
+      }
+      .body-text {
+        grid-area: text;
+        @include center-body;
+      }
     }
   }
-}
+} 
