@@ -10,26 +10,61 @@ body {
     background-color: #fff;
     .hero-grid {
       @include grid;
+      padding-top: 0;
       grid-template-rows: minmax(100px, 100vh);
       grid-template-areas: ". header header header header header header header header header header .";
+      padding-bottom: 0;
     }
     .body-container {
-      @include grid;
-      row-gap: 0;
-      grid-template-rows: auto;
-      grid-template-areas:
-        ". . . title title title title title title . . ."
-        ". . . text text text text text text . . .";
-   
-      .body-title {
-        grid-area: title;
-        @include center-body;
+      .wrapper-text {
+        @include grid-text;
+        row-gap: 0;
+        grid-template-rows: auto;
+        grid-template-areas:
+          ". . . title title title title title title . . ."
+          ". . . text text text text text text . . .";
 
+        .body-title {
+          grid-area: title;
+          @include center-body;
+        }
+        .body-text {
+          grid-area: text;
+          @include center-body;
+          &:nth-of-type(1) {
+            @include gap;
+            padding-top: 0;
+          }
+        }
+        .youtube {
+          grid-column: 4 / span 6;
+          grid-row: 100%;
+        }
+        .ytb-edito {
+          grid-row: 4;
+          grid-column: 4 / span 6;
+        }
       }
-      .body-text {
-        grid-area: text;
-        @include center-body;
+      .wrapper-bg {
+        @include grid-bg;
+        padding-top: 0;
+
+        .bg-yellow-item {
+          min-height: 930px;
+          grid-column: 6 / span 12;
+          background-color: $yellow;
+        }
+        .left-bg {
+          grid-column: 2/6;
+          grid-row: 2 / span 10;
+          align-self: center;
+        }
+      }
+      .right-bg {
+        grid-row: 5 / 9;
+        grid-column: 8 / span 12;
+        align-self: center;
       }
     }
   }
-} 
+}

@@ -4,9 +4,23 @@
     @include gap
 }
 @mixin gap {
-    padding-bottom: calc(100vw/12);
+    padding: calc(100vh/12) 0 ;
 }
+
 @mixin center-body{
     justify-self: center;
-    max-width: 680px;
+    max-width: 800px;
+}
+
+@mixin grid-text{
+    display: grid;
+    grid-template-columns: repeat(12, 8.3%);
+   
+}
+
+@mixin grid-bg{
+    display: grid;
+    grid-template-columns: repeat(12, 8.3%);
+    grid-template-rows: repeat(12,77.5px) ;
+    @include gap;
 }

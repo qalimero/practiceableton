@@ -1,9 +1,19 @@
-.body-container{
-    .body-title{
-        font-weight: 500;
-        margin-bottom: 1.25rem;
+.body-container {
+  .body-title {
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+  }
+  .wrapper-text {
+    .youtube {
+      min-height: 28.125rem;
+      min-width: 50rem;
     }
-    .body-text{
-
+    .ytb-edito {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      @include gap;
+      padding-top: 0;
     }
+  }
 }

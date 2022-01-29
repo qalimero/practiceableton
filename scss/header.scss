@@ -1,15 +1,13 @@
-  .hero-background {
-    grid-area: header;
-    background-image: url(../img/header-img.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    min-height: 100vh;
-    margin-bottom: calc(100vw/12);
-  }
-  .hero-title {
-    grid-area: header;
-    align-self: center;
-    justify-self: center;
-  }
-  
+.hero-background {
+  grid-area: header;
+  background-image: url(../img/header-img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  max-height: 1210px;
+}
+.hero-title {
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+}
