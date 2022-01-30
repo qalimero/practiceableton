@@ -24,7 +24,8 @@ body {
         grid-template-areas:
           ". . . title title title title title title . . ."
           ". . . text text text text text text . . .";
-        &:nth-of-type(2) {
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
           padding-top: 0;
         }
 
@@ -37,6 +38,9 @@ body {
           @include center-body;
           &:nth-of-type(1) {
             padding-top: 0;
+          }
+          &:nth-of-type(2) {
+            grid-row: 4;
           }
         }
       }
@@ -92,6 +96,50 @@ body {
           min-width: 33.3rem;
           grid-column: 2 / span 5;
           grid-row: 4;
+        }
+      }
+      .wrapper-img {
+        @include grid-img;
+        .img-poster {
+          grid-column: 2 / span 10;
+          max-width: 100%;
+        }
+      }
+      .wrapper-bg-3 {
+        @include grid-bg;
+
+        .bg-color-violet {
+          grid-column: 3/ 11;
+          grid-row: 1/12;
+        }
+        .img-small {
+          grid-column: 2;
+          grid-row: 2/12;
+          align-self: center;
+        }
+        .img-big {
+          grid-column: 8/ span 12;
+          grid-row: 3/11;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+//media queries
+
+@media screen and (min-width: 100rem) {
+  body {
+    .wrapper {
+      .body-container {
+        .wrapper-bg-3 {
+          .img-small{
+            max-width: 33.313rem;
+          }
+          .img-big {
+            max-width: 41.663rem;
+          }
         }
       }
     }

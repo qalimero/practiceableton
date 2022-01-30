@@ -4,6 +4,9 @@
     margin-bottom: 1.25rem;
   }
   .wrapper-text {
+    p:nth-of-type(2){
+      margin-top : 1.2rem;
+    }
     .youtube {
       min-height: 28.125rem;
       min-width: 50rem;
@@ -39,6 +42,20 @@
     .bg-bottom {
       background-image: url(../img/bg-bottom.jpg);
       background-size: cover;
+    }
+  }
+  .wrapper-bg-3{
+    .bg-color-violet{
+      background-color: $violet;
+      min-height: 58.313rem;
+    }
+    .img-small{
+    
+      max-width: calc(100vw/3);
+
+    }
+    .img-big{
+      max-width: calc(100vw/2.40);
     }
   }
 }

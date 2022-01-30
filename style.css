@@ -36,7 +36,7 @@ body .wrapper .body-container .wrapper-text {
   grid-template-rows: auto;
   grid-template-areas: ". . . title title title title title title . . ." ". . . text text text text text text . . .";
 }
-body .wrapper .body-container .wrapper-text:nth-of-type(2) {
+body .wrapper .body-container .wrapper-text:nth-of-type(2), body .wrapper .body-container .wrapper-text:nth-of-type(4) {
   padding-top: 0;
 }
 body .wrapper .body-container .wrapper-text .body-title {
@@ -51,6 +51,9 @@ body .wrapper .body-container .wrapper-text .body-text {
 }
 body .wrapper .body-container .wrapper-text .body-text:nth-of-type(1) {
   padding-top: 0;
+}
+body .wrapper .body-container .wrapper-text .body-text:nth-of-type(2) {
+  grid-row: 4;
 }
 body .wrapper .body-container .wrapper-video {
   display: grid;
@@ -111,7 +114,42 @@ body .wrapper .body-container .wrapper-bg-2 .bg-bottom {
   grid-column: 2/span 5;
   grid-row: 4;
 }
+body .wrapper .body-container .wrapper-img {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+}
+body .wrapper .body-container .wrapper-img .img-poster {
+  grid-column: 2/span 10;
+  max-width: 100%;
+}
+body .wrapper .body-container .wrapper-bg-3 {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  grid-template-rows: repeat(12, 77.5px);
+}
+body .wrapper .body-container .wrapper-bg-3 .bg-color-violet {
+  grid-column: 3/11;
+  grid-row: 1/12;
+}
+body .wrapper .body-container .wrapper-bg-3 .img-small {
+  grid-column: 2;
+  grid-row: 2/12;
+  align-self: center;
+}
+body .wrapper .body-container .wrapper-bg-3 .img-big {
+  grid-column: 8/span 12;
+  grid-row: 3/11;
+  align-self: center;
+}
 
+@media screen and (min-width: 100rem) {
+  body .wrapper .body-container .wrapper-bg-3 .img-small {
+    max-width: 33.313rem;
+  }
+  body .wrapper .body-container .wrapper-bg-3 .img-big {
+    max-width: 41.663rem;
+  }
+}
 * {
   font-family: futura-pt, sans-serif;
 }
@@ -193,6 +231,9 @@ nav .subnav li {
   font-weight: 500;
   margin-bottom: 1.25rem;
 }
+.body-container .wrapper-text p:nth-of-type(2) {
+  margin-top: 1.2rem;
+}
 .body-container .wrapper-text .youtube {
   min-height: 28.125rem;
   min-width: 50rem;
@@ -224,6 +265,16 @@ nav .subnav li {
 .body-container .wrapper-bg-2 .bg-bottom {
   background-image: url(../img/bg-bottom.jpg);
   background-size: cover;
+}
+.body-container .wrapper-bg-3 .bg-color-violet {
+  background-color: #d5b3ff;
+  min-height: 58.313rem;
+}
+.body-container .wrapper-bg-3 .img-small {
+  max-width: 33.3333333333vw;
+}
+.body-container .wrapper-bg-3 .img-big {
+  max-width: 41.6666666667vw;
 }
 
 /*# sourceMappingURL=style.css.map */
