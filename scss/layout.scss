@@ -18,11 +18,15 @@ body {
     .body-container {
       .wrapper-text {
         @include grid-text;
+        @include gap;
         row-gap: 0;
         grid-template-rows: auto;
         grid-template-areas:
           ". . . title title title title title title . . ."
           ". . . text text text text text text . . .";
+        &:nth-of-type(2) {
+          padding-top: 0;
+        }
 
         .body-title {
           grid-area: title;
@@ -32,13 +36,16 @@ body {
           grid-area: text;
           @include center-body;
           &:nth-of-type(1) {
-            @include gap;
             padding-top: 0;
           }
         }
+      }
+      .wrapper-video {
+        @include grid-text;
         .youtube {
           grid-column: 4 / span 6;
-          grid-row: 100%;
+          min-height: 28.125rem;
+          width: 100%;
         }
         .ytb-edito {
           grid-row: 4;
@@ -64,6 +71,28 @@ body {
         grid-row: 5 / 9;
         grid-column: 8 / span 12;
         align-self: center;
+      }
+      .wrapper-bg-2 {
+        @include grid-bg-2;
+        .bg-color {
+          grid-column: 1 / span 4;
+          grid-row: 1 / span 12;
+        }
+        .bg-right {
+          grid-column: 4/ 6;
+          grid-row: 3;
+          align-self: center;
+        }
+        .bg-top {
+          min-width: 33.3rem;
+          grid-column: 2 / span 5;
+          grid-row: 2;
+        }
+        .bg-bottom {
+          min-width: 33.3rem;
+          grid-column: 2 / span 5;
+          grid-row: 4;
+        }
       }
     }
   }

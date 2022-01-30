@@ -22,5 +22,12 @@
     display: grid;
     grid-template-columns: repeat(12, 8.3%);
     grid-template-rows: repeat(12,77.5px) ;
-    @include gap;
+ 
+}
+
+@mixin grid-bg-2 {
+    display: grid;
+    grid-template-columns: 8.313rem 33.313rem 8.313rem  8.313rem 33.312rem 8.313rem;
+    grid-template-rows: 8.313rem 25rem 8.313rem 25rem 8.313rem;
+    height: 75rem;
 }
