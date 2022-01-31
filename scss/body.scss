@@ -4,8 +4,8 @@
     margin-bottom: 1.25rem;
   }
   .wrapper-text {
-    p:nth-of-type(2){
-      margin-top : 1.2rem;
+    p:nth-of-type(2) {
+      margin-top: 1.2rem;
     }
     .youtube {
       min-height: 28.125rem;
@@ -44,18 +44,42 @@
       background-size: cover;
     }
   }
-  .wrapper-bg-3{
-    .bg-color-violet{
+  .wrapper-bg-3 {
+    .bg-color-violet {
       background-color: $violet;
       min-height: 58.313rem;
     }
-    .img-small{
-    
-      max-width: calc(100vw/3);
-
+    .img-small {
+      max-width: calc(100vw / 3);
     }
-    .img-big{
-      max-width: calc(100vw/2.40);
+    .img-big {
+      max-width: calc(100vw / 2.4);
+    }
+  }
+  .wrapper-bg-text {
+    border-bottom: 1px solid #fff;
+    .bg-left-text {
+      max-width: calc(100vw / 2.4);
+    }
+    .bg-blue{
+      background-color: $blue-light;
+    }
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  body {
+    .wrapper {
+      .body-container {
+        .wrapper-bg-3 {
+          .img-small {
+            max-width: 33.313rem;
+          }
+          .img-big {
+            max-width: 41.663rem;
+          }
+        }
+      }
     }
   }
 }

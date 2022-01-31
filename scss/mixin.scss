@@ -37,3 +37,11 @@
     grid-template-rows: 8.313rem 25rem 8.313rem 25rem 8.313rem;
     height: 75rem;
 }
+@mixin grid-img-text{
+    @include gap;
+    display: grid;
+    grid-template-columns: repeat(12, 8.3%);
+    grid-auto-rows: max-content;
+    padding-top:0;
+
+}

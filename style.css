@@ -141,15 +141,20 @@ body .wrapper .body-container .wrapper-bg-3 .img-big {
   grid-row: 3/11;
   align-self: center;
 }
-
-@media screen and (min-width: 100rem) {
-  body .wrapper .body-container .wrapper-bg-3 .img-small {
-    max-width: 33.313rem;
-  }
-  body .wrapper .body-container .wrapper-bg-3 .img-big {
-    max-width: 41.663rem;
-  }
+body .wrapper .body-container .wrapper-bg-text {
+  padding: 8.3333333333vh 0;
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  grid-auto-rows: max-content;
+  padding-top: 0;
 }
+body .wrapper .body-container .wrapper-bg-text .bg-left-text {
+  grid-column: 2;
+}
+body .wrapper .body-container .wrapper-bg-text .bg-blue {
+  grid-column: 5/span 12;
+}
+
 * {
   font-family: futura-pt, sans-serif;
 }
@@ -162,6 +167,10 @@ nav {
 a {
   text-decoration: none;
   color: #0000ff;
+}
+
+p {
+  line-height: 1.5;
 }
 
 h1 {
@@ -275,6 +284,24 @@ nav .subnav li {
 }
 .body-container .wrapper-bg-3 .img-big {
   max-width: 41.6666666667vw;
+}
+.body-container .wrapper-bg-text {
+  border-bottom: 1px solid #fff;
+}
+.body-container .wrapper-bg-text .bg-left-text {
+  max-width: 41.6666666667vw;
+}
+.body-container .wrapper-bg-text .bg-blue {
+  background-color: #b1c5ff;
+}
+
+@media screen and (min-width: 100rem) {
+  body .wrapper .body-container .wrapper-bg-3 .img-small {
+    max-width: 33.313rem;
+  }
+  body .wrapper .body-container .wrapper-bg-3 .img-big {
+    max-width: 41.663rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

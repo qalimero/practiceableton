@@ -118,10 +118,20 @@ body {
           align-self: center;
         }
         .img-big {
-          grid-column: 8/ span 12;
+          grid-column: 8 / span 12;
           grid-row: 3/11;
           align-self: center;
         }
+      }
+      .wrapper-bg-text {
+        @include grid-img-text;
+        .bg-left-text{
+          grid-column: 2;
+        }
+        .bg-blue{
+          grid-column: 5 / span 12;
+        }
+     
       }
     }
   }
@@ -129,19 +139,4 @@ body {
 
 //media queries
 
-@media screen and (min-width: 100rem) {
-  body {
-    .wrapper {
-      .body-container {
-        .wrapper-bg-3 {
-          .img-small{
-            max-width: 33.313rem;
-          }
-          .img-big {
-            max-width: 41.663rem;
-          }
-        }
-      }
-    }
-  }
-}
+
