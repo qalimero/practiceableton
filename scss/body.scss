@@ -61,9 +61,19 @@
     .bg-left-text {
       max-width: calc(100vw / 2.4);
     }
-    .bg-blue{
+    .bg-blue {
       background-color: $blue-light;
     }
+    .bg-text {
+      align-self: center;
+      font-size: 1.875rem;
+      line-height: 1.4;
+      font-weight: 400;
+      a {
+        margin-top: 1.9rem;
+      }
+    }
+    
   }
 }
 

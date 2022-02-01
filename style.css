@@ -152,7 +152,16 @@ body .wrapper .body-container .wrapper-bg-text .bg-left-text {
   grid-column: 2;
 }
 body .wrapper .body-container .wrapper-bg-text .bg-blue {
-  grid-column: 5/span 12;
+  grid-column: 7/12;
+  grid-row: 1;
+}
+body .wrapper .body-container .wrapper-bg-text .bg-text {
+  grid-column: 8/11;
+  grid-row: 1;
+}
+body .wrapper .body-container .wrapper-bg-text .bg-text a {
+  margin-top: 1.9rem;
+  display: block;
 }
 
 * {
@@ -293,6 +302,15 @@ nav .subnav li {
 }
 .body-container .wrapper-bg-text .bg-blue {
   background-color: #b1c5ff;
+}
+.body-container .wrapper-bg-text .bg-text {
+  align-self: center;
+  font-size: 1.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.body-container .wrapper-bg-text .bg-text a {
+  margin-top: 1.9rem;
 }
 
 @media screen and (min-width: 100rem) {

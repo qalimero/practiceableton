@@ -129,7 +129,17 @@ body {
           grid-column: 2;
         }
         .bg-blue{
-          grid-column: 5 / span 12;
+          grid-column: 7 / 12;
+          grid-row: 1;
+        }
+        .bg-text{
+          grid-column: 8 / 11;
+          grid-row: 1;
+          
+
+          a{
+            margin-top: 1.9rem;
+          display: block;          }
         }
      
       }
