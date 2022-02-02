@@ -45,3 +45,9 @@
     padding-top:0;
 
 }
+
+@mixin grid-footer{
+    display: grid;
+    grid-template-columns: 8.3% 24.375rem 24.375rem 33.313rem 8.3%;
+    grid-template-rows: 6.375rem 8.313rem 5.625rem 3.125rem 25rem 33.313rem;
+}

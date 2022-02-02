@@ -57,23 +57,77 @@
     }
   }
   .wrapper-bg-text {
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #efefef;
     .bg-left-text {
       max-width: calc(100vw / 2.4);
+      max-height: calc(100vw / 2.4);
     }
     .bg-blue {
       background-color: $blue-light;
+      max-height: calc(100vw / 2.4);
     }
     .bg-text {
       align-self: center;
       font-size: 1.875rem;
       line-height: 1.4;
-      font-weight: 400;
+      font-weight: 500;
       a {
         margin-top: 1.9rem;
       }
     }
-    
+  }
+}
+.footer {
+  &__logo {
+    max-width: 11.75rem;
+    padding-bottom: 4.125rem;
+  }
+  &__top__social {
+    margin-top: 10px;
+    li {
+      display: inline-block;
+      img {
+        width: 40px;
+      }
+    }
+  }
+  &__middle__title,
+  &__right__list,
+  &__right__title,
+  &__bottom__left__title,
+  &__bottom__middle__title {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 450;
+  }
+  &__middle__list {
+    margin-top: 30px;
+  }
+  &__right__text{
+    margin-top: 30px;
+
+  }
+  &__right__sign{
+    margin-top: 10px;
+    &__email{
+      width: 23.938rem;
+      background-color: #eee;
+    }
+    &__btn{
+      padding:0.438rem 1.875rem;
+      color: #fff;
+      font-weight: 500;
+      background-color: $blue-dark;
+
+    }
+  }
+  &__bottom__left__group,
+  &__bottom__middle__group{
+    margin-top: 4.125rem;
+  }
+  &__bottom__left__list,
+  &__bottom__middle__list{
+    margin-top: 5px;
   }
 }
 
